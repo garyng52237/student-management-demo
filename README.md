@@ -1,4 +1,3 @@
-# student-management-demo
 # 学生管理系统 Demo
 
 一个使用 JavaScript + Python Flask + SQLite 实现的最小学生管理系统，满足笔试附加题的基本要求。
