@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  font-family: Arial, "Microsoft YaHei", sans-serif;
+  color: #222;
+  background: #f5f5f5;
+}
+
+.container {
+  width: min(1000px, 94%);
+  margin: 20px auto;
+}
+
+section {
+  margin: 16px 0;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+h1, h2 { margin-top: 0; }
+
+form { margin-bottom: 14px; }
+label { margin: 4px 10px 4px 0; display: inline-block; }
+input, select, button { padding: 5px; }
+button { cursor: pointer; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 7px;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+.message { min-height: 20px; color: #167b32; }
+.message.error { color: #b42318; }

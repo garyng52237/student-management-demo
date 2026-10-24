@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>学生管理系统</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="container">
+    <h1>学生管理系统</h1>
+    <p id="message" class="message"></p>
+
+    <section>
+      <h2>班级管理</h2>
+      <form id="class-form">
+        <input type="hidden" id="class-id">
+        <label>班级名称 <input id="class-name" required></label>
+        <button type="submit">保存班级</button>
+        <button type="button" id="class-cancel">取消编辑</button>
+      </form>
+      <table>
+        <thead><tr><th>编号</th><th>班级名称</th><th>操作</th></tr></thead>
+        <tbody id="class-table"></tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>学生管理</h2>
+      <form id="student-form">
+        <input type="hidden" id="student-id">
+        <label>姓名 <input id="student-name" required></label>
+        <label>性别 <input id="gender"></label>
+        <label>年龄 <input id="age" type="number" min="1" max="120"></label>
+        <label>班级
+          <select id="student-class"><option value="">未分配</option></select>
+        </label>
+        <button type="submit">保存学生</button>
+        <button type="button" id="student-cancel">取消编辑</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>学生列表</h2>
+      <label>按班级筛选
+        <select id="filter-class"><option value="">全部班级</option></select>
+      </label>
+      <table>
+        <thead><tr><th>编号</th><th>姓名</th><th>性别</th><th>年龄</th><th>班级</th><th>操作</th></tr></thead>
+        <tbody id="student-table"></tbody>
+      </table>
+    </section>
+  </main>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
